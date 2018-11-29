@@ -10,3 +10,20 @@ function sumOfDigits(number){
 
 
 
+function uniqueCharacters(str){
+
+    let strArr = [];
+    if(typeof(str) === "string"){
+        strArr = str.split('');
+    }else if(typeof(str) === "number"){
+        strArr = str.toString().split('');
+    }
+
+	let unique = [...new Set(strArr)];
+
+	if(strArr.length == unique.length)
+		return true;
+	else
+		return false; 
+    
+}
