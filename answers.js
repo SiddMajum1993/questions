@@ -48,6 +48,21 @@ function stringCompress(str){
 }
 
 
+function mergeArrays(arr1,arr2){
+    let mergedArray = [];
+    for(let i=0; i < Math.max(arr1.length,arr2.length);i++){
+        if(i < arr1.length)
+            mergedArray.push(arr1[i])
+        if(i < arr2.length)
+            mergedArray.push(arr2[i])
+
+    }
+
+    return mergedArray;
+}
+
+
+
 
 function reverseString(str){
     let strArr = str.split('.')
@@ -61,3 +76,5 @@ function reverseString(str){
 
     return strArr.join('.');
 }
+
+
