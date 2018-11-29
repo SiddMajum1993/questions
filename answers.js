@@ -46,3 +46,18 @@ function stringCompress(str){
     else
         return str;
 }
+
+
+
+function reverseString(str){
+    let strArr = str.split('.')
+    let len = strArr.length;
+
+    for(let i =0; i<len/2; i++){
+        let temp = strArr[i];
+        strArr[i] = strArr[len-1-i];
+        strArr[len-1-i] = temp;
+    }
+
+    return strArr.join('.');
+}
