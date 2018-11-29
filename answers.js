@@ -27,3 +27,22 @@ function uniqueCharacters(str){
 		return false; 
     
 }
+
+
+function stringCompress(str){
+
+    let strArr = str.split('');
+
+    let obj = {};
+
+    for(let i = 0;i<strArr.length;i++){
+        obj.hasOwnProperty(strArr[i]) ? obj[strArr[i]]++ : obj[strArr[i]] = 1 ;
+    }
+
+    let res = Object.entries(obj).flat().join('');
+
+    if(res.length < str.length)
+        return res;
+    else
+        return str;
+}
